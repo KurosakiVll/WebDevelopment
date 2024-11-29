@@ -1,35 +1,100 @@
-.grid-container{
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.tabla-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: auto repeat(5, 1fr); 
     gap: 10px;
+    align-items: center;
+    justify-items: center;
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
 }
 
-.box{
-    width: 100%;
-    height: 100px;
-    border: 3px solid black;
+.encabezado {
+    font-weight: bold;
+    text-align: center;
+    background-color: #ccc;
+    padding: 10px;
 }
 
-.rojo { 
-    background-color: red;
+.vacio {
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.celda {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.nombre-fila {
+    font-weight: bold;
+    text-align: center;
+    background-color: inherit;
+}
+
+.figura {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cuadrado:nth-child(2) { background-color: red; }
+.cuadrado:nth-child(3) { background-color: blue; }
+.cuadrado:nth-child(4) { background-color: green; }
+.cuadrado:nth-child(5) { background-color: yellow; }
+.cuadrado:nth-child(6) { background-color: purple; }
+
+.redondo:nth-child(2) { background-color: red; }
+.redondo:nth-child(3) { background-color: blue; }
+.redondo:nth-child(4) { background-color: green; }
+.redondo:nth-child(5) { background-color: yellow; }
+.redondo:nth-child(6) { background-color: purple; }
+
+.borde-1 {
+    border: 3px solid red;
     border-style: solid;
 }
-.azul { 
-    background-color: blue;
+
+.borde-2 {
+    border: 3px solid blue;
     border-style: dotted;
 }
-.verde { 
-    background-color: green;
+
+.borde-3 {
+    border: 3px solid green;
     border-style: dashed;
 }
-.amarillo {
-    background-color: yellow;
-    border-style: double; 
+
+.borde-4 {
+    border: 3px solid yellow;
+    border-style: double;
 }
-.morado {
-    background-color: purple; 
+
+.borde-5 {
+    border: 3px solid purple;
     border-style: groove;
+}
+
+.cuadrado {
+    border-radius: 0;
+}
+
+.redondeado {
+    border-radius: 10px;
+}
+
+.redondo {
+    border-radius: 50%;
 }

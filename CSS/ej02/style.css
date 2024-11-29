@@ -1,18 +1,63 @@
-table {
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.tabla {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    text-align: center;
+    table-layout: fixed;
 }
 
-td{
+.tabla thead th {
+    font-weight: bold;
+    padding: 10px;
+    background-color: #ccc;
+}
+
+.tabla tbody tr {
+    height: 70px;
+}
+
+.rectangulares {
+    background-color: #f0f0f0;
+}
+
+.redondeados {
+    background-color: #d0f0ff;
+}
+
+.redondos {
+    background-color: #e6ffe6;
+}
+
+.nombre-fila {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: inherit;
+}
+
+.figura {
     width: 50px;
     height: 50px;
-    text-align: center;
-    border: 1px solid black;
+    margin: 0 auto;
+    border: 3px solid black;
+    cursor: pointer;
 }
 
-.rojo { background-color: red; }
-.azul { background-color: blue; }
-.verde { background-color: green; }
-.amarillo { background-color: yellow; }
-.morado { background-color: purple; }
+.cuadrado:nth-child(2) { background-color: red; }
+.cuadrado:nth-child(3) { background-color: blue; }
+.cuadrado:nth-child(4) { background-color: green; }
+.cuadrado:nth-child(5) { background-color: yellow; }
+.cuadrado:nth-child(6) { background-color: purple; }
+
+.redondeado {
+    border-radius: 10px;
+}
+
+.redondo {
+    border-radius: 50%;
+}
+

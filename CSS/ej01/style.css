@@ -1,14 +1,86 @@
-div {
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 10px;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: auto repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.encabezado .celda {
+    font-weight: bold;
+    text-align: center;
+}
+
+.celda {
     width: 50px;
     height: 50px;
-    margin: 10px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.rojo { background-color: red; }
-.azul { background-color: blue; }
-.verde { background-color: green; }
-.amarillo { background-color: yellow; }
-.morado { background-color: purple; }
 
+.nombre-fila {
+    font-weight: bold;
+    text-align: center;
+}
 
+.figura {
+    border: 3px solid black;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.cuadrado:nth-child(2) { background-color: red; }
+.cuadrado:nth-child(3) { background-color: blue; }
+.cuadrado:nth-child(4) { background-color: green; }
+.cuadrado:nth-child(5) { background-color: yellow; }
+.cuadrado:nth-child(6) { background-color: purple; }
+
+.redondo:nth-child(2) { background-color: red; }
+.redondo:nth-child(3) { background-color: blue; }
+.redondo:nth-child(4) { background-color: green; }
+.redondo:nth-child(5) { background-color: yellow; }
+.redondo:nth-child(6) { background-color: purple; }
+
+.cuadrado {
+    border-radius: 0;
+}
+
+.redondeado {
+    border-radius: 10px;
+}
+
+.redondo {
+    border-radius: 50%;
+}
+
+.rectangulares {
+    background-color: #f0f0f0;
+    padding-left: 10px;
+}
+
+.redondeados {
+    background-color: #d0f0ff;
+    padding-left: 10px;
+}
+
+.redondos {
+    background-color: #e8ffe8;
+    padding-left: 10px;
+}
 

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle Usuario</title>
+</head>
+
+<body>
+    <h1>Detalle del Usuario</h1>
+    <div id="detalle"></div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const idUsuario = params.get("id");
+
+        document.getElementById("detalle").textContent = `ID del usuario: ${idUsuario}`;
+    </script>
+</body>
+
+</html>

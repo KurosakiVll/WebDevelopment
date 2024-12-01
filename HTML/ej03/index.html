@@ -1,23 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 3-HTML</title>
+    <title>Formulario de Registro</title>
 </head>
 
 <body>
     <h1>Formulario de Registro</h1>
-    <form action="#" method="post">
-        <label for="name">Nombre:</label>
-        <input type="text" name="name" id="name" required>
-        <br><br>
-        <label for="surname">Apellido:</label>
-        <input type="text" name="surname" id="surname" required>
-        <br><br>
-        <label for="dire">Time:</label>
-        <input type="date" name="" id="">
+    <form action="#" method="post" enctype="multipart/form-data">
+        <label for="nombre">Nombre (obligatorio):</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="apellidos">Apellidos (obligatorio):</label>
+        <input type="text" id="apellidos" name="apellidos" required><br><br>
+
+        <fieldset>
+            <legend>Dirección</legend>
+
+            <label for="tipo_via">Tipo de vía (obligatorio):</label>
+            <input type="text" id="tipo_via" name="tipo_via" required><br><br>
+
+            <label for="nombre_via">Nombre de la vía (obligatorio):</label>
+            <input type="text" id="nombre_via" name="nombre_via" required><br><br>
+
+            <label for="codigo_postal">Código Postal (obligatorio):</label>
+            <input type="text" id="codigo_postal" name="codigo_postal" pattern="\d{5}" title="Solo se aceptan 5 números"
+                required><br><br>
+
+            <label for="ciudad">Ciudad (obligatorio):</label>
+            <input type="text" id="ciudad" name="ciudad" required><br><br>
+
+            <label for="provincia">Provincia (obligatorio):</label>
+            <input type="text" id="provincia" name="provincia" required><br><br>
+
+            <label for="pais">País (obligatorio):</label>
+            <input type="text" id="pais" name="pais" required><br><br>
+        </fieldset>
+
+        <label for="fecha_nacimiento">Fecha de nacimiento (obligatorio):</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
+
+        <label for="nota_media">Nota media en la universidad:</label>
+        <input type="text" id="nota_media" name="nota_media" pattern="\d{1,2}\.\d{2}"
+            title="Formato válido: hasta 2 números antes del punto y 2 después (ej: 9.75)" required><br><br>
+
+        <label for="telefono">Número de teléfono (obligatorio):</label>
+        <input type="text" id="telefono" name="telefono" pattern="\d{9,15}" title="Solo se aceptan entre 9 y 15 números"
+            required><br><br>
+
+        <label for="email">Correo electrónico (obligatorio):</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Contraseña (obligatorio):</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="repeat_password">Repetir contraseña (obligatorio):</label>
+        <input type="password" id="repeat_password" name="repeat_password" required><br><br>
+
+        <label for="pais_seleccion">Seleccionar país:</label>
+        <select id="pais_seleccion" name="pais_seleccion">
+            <option value="España">España</option>
+            <option value="Francia">Francia</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Andorra">Andorra</option>
+        </select><br><br>
+
+        <fieldset>
+            <legend>Tipo de cuenta</legend>
+            <input type="radio" id="gratuita" name="tipo_cuenta" value="Gratuita" required>
+            <label for="gratuita">Gratuita: Acceso limitado.</label><br>
+
+            <input type="radio" id="basica" name="tipo_cuenta" value="Básica" required>
+            <label for="basica">Básica: Acceso a funciones principales.</label><br>
+
+            <input type="radio" id="premium" name="tipo_cuenta" value="Premium" required>
+            <label for="premium">Premium: Acceso completo a todas las funciones.</label><br><br>
+        </fieldset>
+
+        <label for="sobre_mi">Sobre mí:</label>
+        <textarea id="sobre_mi" name="sobre_mi" rows="4" cols="50"
+            placeholder="Escribe una breve descripción sobre ti..."></textarea><br><br>
+
+        <label for="foto_perfil">Foto de perfil:</label>
+        <input type="file" id="foto_perfil" name="foto_perfil" accept="image/*"><br><br>
+
+        <label for="cv">Subir CV:</label>
+        <input type="file" id="cv" name="cv" accept=".pdf, .doc, .docx"><br><br>
+
+        <button type="submit">Registrar</button>
     </form>
 </body>
 
